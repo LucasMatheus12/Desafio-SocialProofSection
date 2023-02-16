@@ -1,0 +1,37 @@
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  padding: 30px;
+
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 3.75rem;
+  color: #751f6d;
+}
+.informacoes {
+  display: grid;
+  gap: 20px;
+}
+.informacoes p {
+  color: #c0c0c0;
+}
+
+.rated{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.rated li{
+    padding: 10px;
+}
+
+
