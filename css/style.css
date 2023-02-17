@@ -1,156 +1,194 @@
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: 'League Spartan', sans-serif;;
+:root {
+  --darkPurple: hsl(300, 43%, 22%);
+  --lightGray: hsl(300, 24%, 96%);
+  --lightPurple: hsl(303, 10%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --darkPink: hsl(333, 80%, 67%);
 }
+
+main {
+  padding: 120px;
+}
+
 .grid-info {
+  align-items: end;
+  display: grid;
   gap: 150px;
   margin-top: 50px;
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: end;
   margin-bottom: 100px;
 }
 
 .title {
+  color: var(--darkPurple);
   font-size: 3.75rem;
-  color: hsl(300, 43%, 22%);
   max-width: 15ch;
 }
 .informacoes {
-  display: grid;
   gap: 20px;
+  display: grid;
 }
 .informacoes p {
+  color: var(--lightPurple);
+  font-weight: 500;
+  line-height: 1.5rem;
   max-width: 49ch;
-  color: #c0c0c0;
 }
 
-.rated-container{
+.rated-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.rated-info{
-  display: flex;
-  gap: 30px;
-  background: hsl(300, 24%, 96%);
-  padding: 15px;
+.rated-info {
+  background: var(--lightGray);
   border-radius: 4px;
-  color: hsl(300, 43%, 22%);
+  color: var(--darkPurple);
+  display: flex;
   font-weight: bold;
+  gap: 30px;
+  padding: 15px;
 }
 
-.rated-info:nth-child(2){
-margin-left: 50px;
+.rated-info:nth-child(2) {
+  margin-left: 50px;
 }
 
-.rated-info:nth-child(3){
+.rated-info:nth-child(3) {
   margin-left: 100px;
-  }
-
-.container{
- display: flex;
- justify-content: space-between;
-gap: 20px;
- margin-top: 80px;
- margin-bottom: 100px;
 }
-.container-card{
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+.container-card {
   border-radius: 4px;
   background: #c0c0c0;
   height: 250px;
   display: grid;
-  background: hsl(300, 43%, 22%);
+  background: var(--darkPurple);
   padding: 0px 30px;
-  
-  
 }
 
-.caixa-feedback{
+.caixa-feedback {
+  align-items: center;
   display: flex;
-  align-items:center;
   gap: 20px;
   margin-bottom: 10px;
 }
 
-.feedback-image img{
-  height: 50px;
+.feedback-image img {
   border-radius: 50%;
+  height: 50px;
 }
 
-.feedback-texto{
-  color: hsl(0, 0%, 100%);
-  font-weight: 400;
+.feedback-texto {
+  color: var(--white);
   max-width: 60ch;
   line-height: 1.2rem;
 }
 
-.feedback-info p{
-  color: hsl(0, 0%, 100%);
+.feedback-info p {
+  color: var(--white);
   font-weight: bold;
-  
 }
 
-.feedback-info span{
-  color: hsl(333, 80%, 67%);
+.feedback-info span {
+  color: var(--darkPink);
 }
 
-.container-card:nth-child(2){
+.container-card:nth-child(2) {
   margin-top: 30px;
 }
 
-.container-card:nth-child(3){
+.container-card:nth-child(3) {
   margin-top: 60px;
 }
 
-.container-card:nth-child(2):hover{
+.container-card:nth-child(2):hover {
   margin-top: initial;
   transition: all 0.5s ease-in-out;
 }
 
-.container-card:nth-child(3):hover{
+.container-card:nth-child(3):hover {
   margin-top: initial;
   transition: all 0.5s ease-in-out;
 }
-
-
-@media (max-width: 800px){
-  main{
-    padding: 20px;
+@media (max-width: 1000px) {
+  main {
+    padding: 50px;
   }
-  .grid-info{
+  .grid-info {
     grid-template-columns: none;
     justify-content: center;
     text-align: center;
     gap: 60px;
   }
 
- 
-  .rated-info{
+  .rated-info {
     flex-direction: column;
     gap: 5px;
   }
-  .rated-info:nth-child(2){
+  .rated-info:nth-child(2) {
     margin-left: initial;
-    }
-    
-    .rated-info:nth-child(3){
-      margin-left: initial;
-      }
+  }
 
-      .container{
-       flex-direction: column;
-       align-items: center;
-       
-       }
+  .rated-info:nth-child(3) {
+    margin-left: initial;
+  }
 
-      .container-card:nth-child(2){
-        margin-top: initial;
-      }
-      
-      .container-card:nth-child(3){
-        margin-top: initial;
-      }
+  .container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container-card:nth-child(2) {
+    margin-top: initial;
+  }
+
+  .container-card:nth-child(3) {
+    margin-top: initial;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 50px;
+  }
+  .grid-info {
+    grid-template-columns: none;
+    justify-content: center;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .rated-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .rated-info:nth-child(2) {
+    margin-left: initial;
+  }
+
+  .rated-info:nth-child(3) {
+    margin-left: initial;
+  }
+
+  .container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container-card:nth-child(2) {
+    margin-top: initial;
+  }
+
+  .container-card:nth-child(3) {
+    margin-top: initial;
+  }
 }
