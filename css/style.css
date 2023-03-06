@@ -6,8 +6,14 @@
   --darkPink: hsl(333, 80%, 67%);
 }
 
+body{
+  height: 100vh;
+}
 main {
-  padding: 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .grid-info {
@@ -103,20 +109,22 @@ main {
 }
 
 .container-card:nth-child(2) {
-  margin-top: 30px;
+  transform: translateY(30px);
+  transition: all 0.5s ease-in-out;
 }
 
 .container-card:nth-child(3) {
-  margin-top: 60px;
+  transform: translateY(60px);
+  transition: all 0.5s ease-in-out;
 }
 
 .container-card:nth-child(2):hover {
-  margin-top: initial;
+  transform: translateY(0px);
   transition: all 0.5s ease-in-out;
 }
 
 .container-card:nth-child(3):hover {
-  margin-top: initial;
+  transform: translateY(0px);
   transition: all 0.5s ease-in-out;
 }
 @media (max-width: 1000px) {
@@ -148,11 +156,11 @@ main {
   }
 
   .container-card:nth-child(2) {
-    margin-top: initial;
+    transform: translateY(0);
   }
 
   .container-card:nth-child(3) {
-    margin-top: initial;
+    transform: translateY(0);
   }
 }
 
